@@ -5,6 +5,8 @@ import { DateFormater } from "../../../utils/DateFormater";
 import Pagination from "../../../components/Pagination/Pagination";
 import CardImage from "../../../components/CardImage/CardImage";
 import fallBackImage from "/hero/hero.jpg";
+import backgroundImage from '/hero/hero.jpg';
+
 
 const Ideas = () => {
   const [ideas, setIdeas] = useState([]);
@@ -13,7 +15,6 @@ const Ideas = () => {
   const [pageSize, setPageSize] = useState(10);
   const [totalItems, setTotalItems] = useState(0);
   const [sortBy, setSortBy] = useState("newest");
-  const backgroundImage = "/public/hero/hero.jpg";
 
   const fetchData = async (
     pageNumber = 1,

@@ -1,7 +1,7 @@
 import React from "react";
+import backgroundImage from '/hero/hero.jpg';
 
 const Careers = () => {
-  const backgroundImage = "/public/hero/hero.jpg";
 
   return (
     <section className="w-full h-screen relative">
