@@ -2,7 +2,7 @@ export const NavMenu = [
   {
     id: 1,
     label: 'Work',
-    link: '/work'
+    link: '/'
   },
   {
     id: 2,
@@ -12,7 +12,7 @@ export const NavMenu = [
   {
     id: 3,
     label: 'Ideas',
-    link: '/ideas'
+    link: '/'
   },
   {
     id: 4,

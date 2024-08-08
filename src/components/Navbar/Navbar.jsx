@@ -35,41 +35,43 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <header
-      className={`z-20 fixed w-full bg-color-primary-500 p-2 transition-transform duration-300 ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <nav className="w-full max-w-screen-xl mx-auto p-2 px-2 flex flex-row-reverse lg:flex-row items-center justify-between">
-        <div>
-          <img src="/logo/suitmedia_logo.png" alt="" className="w-24" />
-        </div>
-        <ul className="lg:inline-flex gap-x-4 text-white text-sm hidden">
-          {NavMenu.map((menu) => (
-            <li key={menu.id}>
-              <NavLink
-                to={menu.link}
-                className={({ isActive }) =>
-                  `hover:text-color-primary-100 p-2 transition-colors ${
-                    isActive
-                      ? "border-white border-b-4 "
-                      : "border-transparent border-b-4"
-                  }`
-                }
-              >
-                {menu.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-        <div className="lg:hidden" onClick={() => setMenuOpen(true)}>
-          <button className="p-2">
-            <HiMenu className="text-white font-bold"></HiMenu>
-          </button>
-        </div>
-      </nav>
+    <>
+      <header
+        className={`z-20 fixed w-full bg-color-primary-500 p-2 transition-transform duration-300 ${
+          showNavbar ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <nav className="w-full max-w-screen-xl mx-auto p-2 px-2 flex flex-row-reverse lg:flex-row items-center justify-between">
+          <div>
+            <img src="/logo/suitmedia_logo.png" alt="" className="w-24" />
+          </div>
+          <ul className="lg:inline-flex gap-x-4 text-white text-sm hidden">
+            {NavMenu.map((menu) => (
+              <li key={menu.id}>
+                <NavLink
+                  to={menu.link}
+                  className={({ isActive }) =>
+                    `hover:text-color-primary-100 p-2 transition-colors ${
+                      isActive
+                        ? "border-white border-b-4 "
+                        : "border-transparent border-b-4"
+                    }`
+                  }
+                >
+                  {menu.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <div className="lg:hidden" onClick={() => setMenuOpen(true)}>
+            <button className="p-2">
+              <HiMenu className="text-white font-bold"></HiMenu>
+            </button>
+          </div>
+        </nav>
+      </header>
       <div
-        className={`absolute w-full h-screen top-0 right-0 ${
+        className={`fixed w-full h-screen top-0 right-0 z-40 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform`}
       >
@@ -106,7 +108,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </header>
+    </>
   );
 };
 

@@ -12,7 +12,7 @@ function App() {
         <Navbar />
           <Routes>
             <Route path="/ideas" Component={Ideas}></Route>
-            <Route path="/work" Component={Ideas}></Route>
+            <Route path="/" Component={Ideas}></Route>
             <Route path="/services" Component={Ideas}></Route>
             <Route path="/contact" Component={Ideas}></Route>
             <Route path="/careers" Component={Ideas}></Route>
