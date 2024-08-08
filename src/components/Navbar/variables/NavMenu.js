@@ -12,7 +12,7 @@ export const NavMenu = [
   {
     id: 3,
     label: 'Ideas',
-    link: '/'
+    link: '/ideas'
   },
   {
     id: 4,

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Services = () => {
+const Work = () => {
   const backgroundImage = "/public/hero/hero.jpg";
 
   return (
@@ -22,11 +22,11 @@ const Services = () => {
         }}
       ></div>
       <div className="relative z-10 w-full h-full flex flex-col justify-center gap-y-4 items-center text-white">
-        <h1 className="text-5xl font-bold">Services</h1>
-        <p>This is the service page</p>
+        <h1 className="text-5xl font-bold">Work</h1>
+        <p>This is the work page</p>
       </div>
     </section>
   );
 };
 
-export default Services;
+export default Work;
